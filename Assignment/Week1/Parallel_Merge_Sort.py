@@ -1,5 +1,4 @@
 import time
-import random
 from multiprocessing import Pool, cpu_count
 
 def merge(left, right):
@@ -25,20 +24,20 @@ def merge(left, right):
         
     return sorted_list
 
-def sequential_merge_sort(array):
-    length = len(array)
+def sequential_merge_sort(*args):
+    array, size = args[0] if len(args) == 1 else args
     
-    if length <= 1:
+    if size <= 1:
         return array
     
-    middle = length // 2
+    middle = size // 2
     
-    left = sequential_merge_sort(array[ : middle])
-    right = sequential_merge_sort(array[middle : ])
+    left = sequential_merge_sort(array[ : middle], middle)
+    right = sequential_merge_sort(array[middle : ], size - middle)
     
     return merge(left, right)
 
-def parallel_merge_sort(array):
+def parallel_merge_sort(array, size):
     # processes = 2 ** n <= cpu_count()
     processes = 1
     while (processes < cpu_count()):
@@ -50,13 +49,12 @@ def parallel_merge_sort(array):
     pool = Pool(processes = processes)
 
     # Split the initial array into partitions, and perform a sequential merge sort across each partition.
-    length = len(array) // processes
     results = []
     for i in range(processes):
         if i < processes - 1:
-            results.append(array[i * length : (i + 1) * length])
+            results.append((array[i * (size // processes) : (i + 1) * (size // processes)], size // processes))
         else:
-            results.append(array[i * length : ])
+            results.append((array[i * (size // processes) : size], size - i * (size // processes)))
             
     results = pool.map(sequential_merge_sort, results)
         
@@ -67,13 +65,18 @@ def parallel_merge_sort(array):
     return results[0]
 
 if __name__ == '__main__':
-    # Create a random array with length = 400000
-    length = 400000
-    unsorted_array = [random.randint(0, 1e9) for n in range(length)]  
+    n = int(input('Size: '))
+    unsorted_array = list(map(int, input('Array elements: ').strip().split()))[:n]
+    print('')
           
     # Test
     for sort in parallel_merge_sort, sequential_merge_sort:
         start = time.time()
-        sorted_array = sort(unsorted_array)
+        sorted_array = sort(unsorted_array, n)
         end = time.time()
-        print(sort.__name__, end - start, sorted(unsorted_array) == sorted_array)
+        
+        print('Algorithm: ', sort.__name__)
+        print('Array after sort: ', sorted_array)
+        print('Time to sort: ', end - start)
+        print('Array is sorted: ', sorted(unsorted_array) == sorted_array)
+        print('')
