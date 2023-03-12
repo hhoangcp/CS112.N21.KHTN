@@ -49,12 +49,13 @@ def parallel_merge_sort(array, size):
     pool = Pool(processes = processes)
 
     # Split the initial array into partitions, and perform a sequential merge sort across each partition.
+    psize = size // processes
     results = []
     for i in range(processes):
         if i < processes - 1:
-            results.append((array[i * (size // processes) : (i + 1) * (size // processes)], size // processes))
-        else:
-            results.append((array[i * (size // processes) : size], size - i * (size // processes)))
+            results.append((array[i * psize : (i + 1) * psize], psize))
+        else: 
+            results.append((array[i * psize : size], size - i * psize))
             
     results = pool.map(sequential_merge_sort, results)
         
@@ -68,15 +69,18 @@ if __name__ == '__main__':
     n = int(input('Size: '))
     unsorted_array = list(map(int, input('Array elements: ').strip().split()))[:n]
     print('')
-          
-    # Test (parallel_merge_sort may be slower than sequential_merge_sort if n < 100000)
-    for sort in parallel_merge_sort, sequential_merge_sort:
-        start = time.time()
-        sorted_array = sort(unsorted_array, n)
-        end = time.time()
-        
-        print('Algorithm: ', sort.__name__)
-        print('Array after sort: ', sorted_array)
-        print('Time to sort: ', end - start)
-        print('Array is sorted: ', sorted(unsorted_array) == sorted_array)
-        print('')
+    
+    start = time.time()      
+    sorted_array = parallel_merge_sort(unsorted_array, n)
+    end = time.time()
+    
+    print('Array after sort:', sorted_array)
+    print('Time to sort:', end - start)
+    print('Non-decreasing:', sorted(unsorted_array) == sorted_array)
+    
+    start = time.time()      
+    sorted_array = sequential_merge_sort(unsorted_array, n)
+    end = time.time()
+    
+    print('Time to sort (if only sequential merge sort algorithm is used):', end - start)
+    
