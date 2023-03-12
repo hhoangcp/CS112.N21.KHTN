@@ -1,1 +1,24 @@
-# CS112.N21.KHTN
+<p align="center">
+  <a href="https://www.uit.edu.vn/" title="Trường Đại học Công nghệ Thông tin" style="border: none;">
+    <img src="https://i.imgur.com/WmMnSRt.png" alt="Trường Đại học Công nghệ Thông tin | University of Information Technology">
+  </a>
+</p>
+
+<h1 align="center"><b>CS112.N21.KHTN - Phân tích và thiết kế thuật toán</b></h>
+
+## Nhóm 8:
+|**STT**|**MSSV**|  **Họ và tên**  |**Chức vụ**|       **Email**      |
+|-------|--------|-----------------|-----------|----------------------|
+|   1   |21520033|   Hà Văn Hoàng  |Nhóm trưởng|21520033@gm.uit.edu.vn|
+|   2   |21522883|Võ Thị Phương Anh|Thành viên |21522883@gm.uit.edu.vn|
+
+## Giới thiệu môn học:
+* **Tên môn học:** Phân tích và thiết kế thuật toán
+* **Mã môn học:** CS112
+* **Mã lớp:** CS112.N21.KHTN
+* **Năm học:** HK2 (2022 - 2023)
+* **Giảng viên**: TS. Nguyễn Thanh Sơn
+
+## Về bài tập trên lớp:
+Được lưu trữ tại thư mục Assignment, trong đó có các thư mục nhỏ chứa bài làm tương ứng của các tuần như sau:
+- Tuần 1 (Thư mục: Week1): Thiết kế thuật toán song song cho Merge Sort
