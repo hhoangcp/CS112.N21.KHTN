@@ -2,7 +2,7 @@ import time
 from multiprocessing import Pool, cpu_count
 
 def merge(left, right):
-    sorted_array = []
+    merged = []
     
     left_size = len(left)
     right_size = len(right)
@@ -10,19 +10,19 @@ def merge(left, right):
     
     while left_curr < left_size and right_curr < right_size:
         if left[left_curr] < right[right_curr]:
-            sorted_array.append(left[left_curr])
+            merged.append(left[left_curr])
             left_curr += 1
         else:
-            sorted_array.append(right[right_curr])
+            merged.append(right[right_curr])
             right_curr += 1
     
     if left_curr == left_size:
-        sorted_array.extend(right[right_curr : ])
+        merged.extend(right[right_curr : ])
         
     if right_curr == right_size:
-        sorted_array.extend(left[left_curr : ])
+        merged.extend(left[left_curr : ])
         
-    return sorted_array
+    return merged
 
 def sequential_merge_sort(*args):
     array, size = args[0] if len(args) == 1 else args
@@ -69,7 +69,7 @@ if __name__ == '__main__':
     unsorted_array = list(map(int, input('Array elements: ').strip().split()))[:n]
     print('')
           
-    # Test
+    # Test (parallel_merge_sort may be slower than sequential_merge_sort if n < 100000)
     for sort in parallel_merge_sort, sequential_merge_sort:
         start = time.time()
         sorted_array = sort(unsorted_array, n)
