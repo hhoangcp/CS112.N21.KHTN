@@ -1,4 +1,6 @@
 import time
+import sys
+import random
 from multiprocessing import Pool, cpu_count
 
 def merge(left, right):
@@ -66,21 +68,47 @@ def parallel_merge_sort(array, size):
     return results[0]
 
 if __name__ == '__main__':
-    n = int(input('Size: '))
-    unsorted_array = list(map(int, input('Array elements: ').strip().split()))[:n]
-    print('')
+    n = 0
+    unsorted_array = []
+    random.seed(time.time())
     
-    start = time.time()      
-    sorted_array = parallel_merge_sort(unsorted_array, n)
-    end = time.time()
-    
-    print('Array after sort:', sorted_array)
-    print('Time to sort:', end - start)
-    print('Non-decreasing:', sorted(unsorted_array) == sorted_array)
-    
-    start = time.time()      
-    sorted_array = sequential_merge_sort(unsorted_array, n)
-    end = time.time()
-    
-    print('Time to sort (if only sequential merge sort algorithm is used):', end - start)
+    while True:
+        print('Parallel Merge Sort:')
+        print('0. Generate a random array')
+        print('1. Create a custom array')
+        print('2. Quit')
+        key = input('Your choice: ')
+        
+        while key != '0' and key != '1' and key != '2':
+            key = input('You entered wrong! Your choice: ')
+            
+        if key == '2':
+            sys.exit()
+        
+        n = int(input('Size: '))
+        
+        if key == '1':
+            unsorted_array = list(map(int, input('Array elements: ').strip().split()))[:n]
+        else:
+            low = int(input('Lowest value: '))
+            high = int(input('Highest value: '))
+            
+            unsorted_array = [random.randint(low, high) for i in range(n)]
+            
+        print('')
+        
+        start = time.time()      
+        sorted_array = parallel_merge_sort(unsorted_array, n)
+        end = time.time()
+        
+        print('Array after sort:', sorted_array)
+        print('Time to sort:', end - start)
+        print('Non-decreasing:', sorted(unsorted_array) == sorted_array)
+        
+        start = time.time()      
+        sorted_array = sequential_merge_sort(unsorted_array, n)
+        end = time.time()
+        
+        print('Time to sort (if only sequential merge sort algorithm is used):', end - start)
+        print('')
     
