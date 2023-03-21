@@ -17,7 +17,7 @@
 * **Mã môn học:** CS112
 * **Mã lớp:** CS112.N21.KHTN
 * **Năm học:** HK2 (2022 - 2023)
-* **Giảng viên**: TS. Nguyễn Thanh Sơn
+* **Giảng viên**: ThS. Nguyễn Thanh Sơn
 
 ## Về bài tập trên lớp:
 Được lưu trữ tại thư mục [Assignment](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment), trong đó có các thư mục nhỏ chứa bài làm tương ứng của các tuần như sau:
