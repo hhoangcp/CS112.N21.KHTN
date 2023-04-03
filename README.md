@@ -19,7 +19,7 @@
 * **Năm học:** HK2 (2022 - 2023)
 * **Giảng viên**: ThS. Nguyễn Thanh Sơn
 
-## Về bài tập trên lớp:
+## Về bài tập:
 Được lưu trữ tại thư mục [Assignment](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment), trong đó có các thư mục nhỏ chứa bài làm tương ứng của các tuần như sau:
 - Tuần 1 (Thư mục: [Week1](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week1)): Lựa chọn CRDL và thiết kế thuật toán song song cho Merge Sort
 - Tuần 2 (Thư mục: [Week2](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week2)): Phân tích độ phức tạp thuật toán không đệ quy
