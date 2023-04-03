@@ -23,6 +23,7 @@
 Được lưu trữ tại thư mục [Assignment](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment), trong đó có các thư mục nhỏ chứa bài làm tương ứng của các tuần như sau:
 - Tuần 1 (Thư mục: [Week1](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week1)): Lựa chọn CRDL và thiết kế thuật toán song song cho Merge Sort
 - Tuần 2 (Thư mục: [Week2](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week2)): Phân tích độ phức tạp thuật toán không đệ quy
+- Tuần 3 (Thư mục: [Week3](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week3)): Phân tích độ phức tạp thuật toán đệ quy
 
 ## Về buổi thảo luận:
 **Chủ đề: Kiểm tra tính đúng đắn và hiệu năng của chương trình bằng bộ test**
