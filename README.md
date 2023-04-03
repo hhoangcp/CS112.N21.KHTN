@@ -25,4 +25,4 @@
 - Tuần 2 (Thư mục: [Week2](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week2)): Phân tích độ phức tạp thuật toán không đệ quy
 
 ## Về buổi thảo luận:
-Tất cả các dữ liệu, bao gồm slide, biên bản thảo luận, kết quả quiz và những dữ liệu liên quan được lưu trữ tại thư mục [Seminar](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Seminar)
+Tất cả các dữ liệu, bao gồm slide, kết quả quiz và những dữ liệu liên quan khác được lưu trữ tại thư mục [Seminar](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Seminar)
