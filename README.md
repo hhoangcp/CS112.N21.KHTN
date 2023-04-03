@@ -25,5 +25,5 @@
 - Tuần 2 (Thư mục: [Week2](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week2)): Phân tích độ phức tạp thuật toán không đệ quy
 
 ## Về buổi thảo luận:
-* **Chủ đề: Kiểm tra tính đúng đắn và hiệu năng của chương trình bằng bộ test**
-* Tất cả các dữ liệu, bao gồm slide, kết quả quiz và những dữ liệu liên quan khác được lưu trữ tại thư mục [Seminar](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Seminar)
+**Chủ đề: Kiểm tra tính đúng đắn và hiệu năng của chương trình bằng bộ test**\\
+Tất cả các dữ liệu, bao gồm slide, kết quả quiz và những dữ liệu liên quan khác được lưu trữ tại thư mục [Seminar](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Seminar)
