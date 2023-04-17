@@ -27,6 +27,6 @@
 - Tuần 5 (Thư mục: [Week5](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week5)): Phương pháp thiết kế thuật toán: Completed search - Brute force
 
 ## Về buổi thảo luận:
-**Chủ đề: Kiểm tra tính đúng đắn và hiệu năng của chương trình bằng bộ test**
+**Chủ đề: Kiểm tra tính đúng đắn và hiệu năng của chương trình bằng bộ test (Tuần 4)**
 
 Tất cả các dữ liệu, bao gồm slide, kết quả quiz và những dữ liệu liên quan khác được lưu trữ tại thư mục [Seminar](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Seminar)
