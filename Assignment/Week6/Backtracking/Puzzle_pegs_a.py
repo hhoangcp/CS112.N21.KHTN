@@ -2,7 +2,7 @@ Next = []
 moves = []
 pos = -1
 
-### If there is a solution, the number of steps is exactly 13. 
+### If there is a solution, the number of moves is exactly 13. 
 ### -> Find a solution.
 
 def Init():
