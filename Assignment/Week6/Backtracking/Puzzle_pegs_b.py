@@ -30,8 +30,11 @@ def Init():
 
 ## mask[i] = 0 if hole i is empty, 1 if hole i is occupied
 def Backtracking(mask):
-    if len(moves) == 13 and mask == (1 << pos):
-        return True
+    if len(moves) == 13:
+        if mask == (1 << pos):
+            return True
+        else:
+            return False
     
     for s in range(15):
         if (mask & (1 << s)) > 0: ## Check if hole s is occupied
