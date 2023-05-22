@@ -1,4 +1,4 @@
-/// hhoangcpascal
+/// hhoangcp
 
 #include <iostream>
 #include <algorithm>
@@ -72,8 +72,9 @@ void Store_Codes(node root) {
 
 string Huffman_Encoding(string s) {
     string ans = "";
-    for(char c: s) 
-    ans = ans + codes[c];
+    for(char c: s)
+    if (!codes.count(c)) return "??";
+    else ans = ans + codes[c];
     return ans;
 }
 
@@ -91,6 +92,8 @@ string Huffman_Decoding(node root, string s) {
         }
     }
 
+    if (curr != root) return "??";
+
     return ans;
 }
 
@@ -106,6 +109,11 @@ int main() {
     node root; string s;
     Huffman_Tree(root, freq);
     Store_Codes(root);
+    cout << "Huffman code table:\n";
+    for(auto pa: codes) {
+        cout << pa.first << " -> " << pa.second << '\n';
+    }
+
     cout << "String to encode: "; getline(cin, s);
     cout << "Encoded string: " << Huffman_Encoding(s) << '\n';
     cout << "String to decode: "; getline(cin, s);
@@ -113,4 +121,3 @@ int main() {
 
     return 0;
 }
-
