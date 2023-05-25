@@ -26,7 +26,8 @@
 - Tuần 3 (Thư mục: [Week3](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week3)): Phân tích độ phức tạp thuật toán đệ quy
 - Tuần 5 (Thư mục: [Week5](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week5)): Phương pháp thiết kế thuật toán: Completed search - Brute force
 - Tuần 6 (Thư mục: [Week6](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week6)): Phương pháp thiết kế thuật toán: Completed search - Backtracking và Phương pháp thiết kế thuật toán: Completed search - Branch and bound
-- Tuần 7 (Thư mục: [Week7](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week7)): Phương pháp thiết kế thuật toán: Divide and Conquer và Phương pháp thiết kế thuật toán: Greedy
+- Tuần 7 (Thư mục: [Week7](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week7)): Phương pháp thiết kế thuật toán: Greedy
+- Tuần 8 (Thư mục: [Week8](https://github.com/hhoangcpascal/CS112.N21.KHTN/tree/main/Assignment/Week8)): Phương pháp thiết kế thuật toán: Divide and Conquer và Phương pháp thiết kế thuật toán: Dynamic Programming (1)
 
 ## Về buổi thảo luận:
 **Chủ đề: Kiểm tra tính đúng đắn và hiệu năng của chương trình bằng bộ test (Tuần 4)**
