@@ -299,6 +299,7 @@ int main() {
 
         int dim = Dim(P);
         if (dim < 3) {
+            (cout << fixed).precision(4);
             cout << 0 << ' ' << 0 << '\n';
             continue;
         }
